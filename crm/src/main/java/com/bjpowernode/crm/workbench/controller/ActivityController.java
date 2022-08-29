@@ -48,6 +48,7 @@ public class ActivityController {
     }
     @RequestMapping("/workbench/activity/saveActivity.do")
     public @ResponseBody Object saveActivity(Activity activity, HttpSession session){
+        int i;
         ReturnObject returnObject = new ReturnObject();
         User user=(User)session.getAttribute(Contants.SESSION_USER);
         activity.setId(UUIDUtils.getUUID());
